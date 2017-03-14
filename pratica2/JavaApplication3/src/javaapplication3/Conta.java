@@ -3,13 +3,12 @@ package javaapplication3;
 
 public class Conta {
     int numero;
-    String titular;
+    Cliente titular;
     String cpf;
     double saldo;
     
     void visualizarSaldo() {
         System.out.println("Saldo =" + this.saldo);
-        
     }
     
     void depositar(double valor) {
@@ -45,8 +44,13 @@ public class Conta {
             System.out.println("n ok");
             return false;
         }
-        
-        
     }
+    
+    void exibirInfoConta(){
+        System.out.println("Número: " + this.numero);
+        System.out.println("Saldo: R$ " + this.saldo);
+    }
+        
+    
 }
    

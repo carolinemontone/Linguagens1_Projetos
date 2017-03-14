@@ -6,21 +6,34 @@
 package javaapplication3;
 
 public class JavaApplication3 {
-
+    
+    void Menu(){
+        System.out.println("Selecione a opção desejada:\n"
+                + "1-Depositar\n" = );
+    }
+    
     public static void main(String[] args) {
         
         Conta c1 = new Conta();
-        c1.saldo = 1000;
-        c1.visualizarSaldo();
+        Cliente carol = new Cliente();
         
-        c1.depositar(200);
-        c1.visualizarSaldo();
+        c1.numero = 1;
+        c1.titular = carol;
+        c1.cpf = "443.026.568-24";
+        c1.saldo = 7487374;
         
-        c1.transferirPara(c1, 200);
-        c1.visualizarSaldo();
-     //   Conta c2 = new Conta();
-     //   c2.saldo = 1000;
-     //   c2.visualizarSaldo();
+        carol.nome = "Caroline";
+        carol.sobrenome = "Montone";
+        carol.cpf = c1.cpf;
+        
+        System.out.println("Bem-vindo ao Banco B&G");
+        
+        carol.exibirInfoCliente();
+        c1.exibirInfoConta();
+        
+        
+        
+        
      
     }
     

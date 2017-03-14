@@ -10,5 +10,12 @@ package javaapplication3;
  * @author Professor
  */
 public class Cliente {
-    
+    String nome;
+    String sobrenome;
+    String cpf;
+
+    void exibirInfoCliente(){
+        System.out.println("Nome completo: " + this.nome + " " + this.sobrenome);
+        System.out.println("CPF: " + this.cpf);
+    }
 }
