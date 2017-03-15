@@ -10,10 +10,24 @@ package javaapplication3;
  * @author Professor
  */
 public class Cliente {
-    String nome;
-    String sobrenome;
-    String cpf;
+    private String nome;
+    private String sobrenome;
+    private String cpf;
 
+    public Cliente(String nome, String sobrenome, String cpf) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.cpf = cpf;
+    }
+    
+    String getCpf (){
+        return this.cpf;
+    }
+    
+    void setCpf (String cpf){
+        this.cpf = cpf;
+    }
+       
     void exibirInfoCliente(){
         System.out.println("Nome completo: " + this.nome + " " + this.sobrenome);
         System.out.println("CPF: " + this.cpf);

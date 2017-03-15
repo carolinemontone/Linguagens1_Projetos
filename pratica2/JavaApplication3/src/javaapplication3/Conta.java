@@ -2,10 +2,14 @@
 package javaapplication3;
 
 public class Conta {
-    int numero;
-    Cliente titular;
-    String cpf;
+    private int numero;
+    private Cliente titular;
     private double saldo;
+    
+    public Conta (String nome, String sobrenome, String cpf, int numero){
+        this.titular = new Cliente(nome, sobrenome, cpf);
+        this.numero = numero;
+    }
     
     void visualizarSaldo() {
         System.out.println("Saldo =" + this.saldo);
@@ -47,10 +51,28 @@ public class Conta {
     }
     
     void exibirInfoConta(){
+        this.titular.exibirInfoCliente();
         System.out.println("Número: " + this.numero);
         System.out.println("Saldo: R$ " + this.saldo);
     }
-        
+    
+    void setNumero (int numero){
+        this.numero = numero;
+    }
+    
+    void setTitular (Cliente titular){
+        this.titular = titular; 
+    }
+    
+    int getNumero (){
+        return this.numero;
+    }
+    
+ 
+    
+    Cliente getTitular (){
+        return this.titular; 
+    }    
     
 }
    

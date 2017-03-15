@@ -14,21 +14,13 @@ public class JavaApplication3 {
     
     public static void main(String[] args) {
         
-        Conta c1 = new Conta();
-        Cliente carol = new Cliente();
-        
-        c1.numero = 1;
-        c1.titular = carol;
-        c1.cpf = "443.026.568-24";
+        Conta c1 = new Conta("Caroline", "Montone", "443.026.568-24", 1);
         c1.depositar(400000);
-        
-        carol.nome = "Caroline";
-        carol.sobrenome = "Montone";
-        carol.cpf = c1.cpf;
+       
         
         System.out.println("Bem-vindo ao Banco B&G");
         
-        carol.exibirInfoCliente();
+        c1.exibirInfoConta();
         Menu();
         
         
