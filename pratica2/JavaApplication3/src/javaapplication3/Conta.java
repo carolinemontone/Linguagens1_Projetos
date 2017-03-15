@@ -5,7 +5,7 @@ public class Conta {
     int numero;
     Cliente titular;
     String cpf;
-    double saldo;
+    private double saldo;
     
     void visualizarSaldo() {
         System.out.println("Saldo =" + this.saldo);
