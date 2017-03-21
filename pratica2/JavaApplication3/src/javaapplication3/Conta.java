@@ -55,7 +55,7 @@ public class Conta {
         System.out.println("Número: " + this.numero);
         System.out.println("Saldo: R$ " + this.saldo);
     }
-    
+   
     void setNumero (int numero){
         this.numero = numero;
     }
@@ -67,12 +67,5 @@ public class Conta {
     int getNumero (){
         return this.numero;
     }
-    
- 
-    
-    Cliente getTitular (){
-        return this.titular; 
-    }    
-    
-}
-   
+      
+} 
