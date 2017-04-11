@@ -26,8 +26,7 @@ public class GerenteVendas extends Vendedor{
                 return false;    
         }
         else
-            return false;
-            
+            return false;   
     }
     
     public void exibirResumo(){
