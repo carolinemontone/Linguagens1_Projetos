@@ -54,17 +54,11 @@ public class Funcionario {
         this.horaExtra = n;
     }
     
-    public double calcularComissao(){
-        return this.totalVendas * Vendedor.taxaComissao;
-    }
     
     public double calcularDecTer(){
         return this.salarioBase + 1;
     }
     
-    public double calcularSalarioMes(){
-        return this.salarioBase + this.horaExtra + this.calcularComissao();
-    }
     
     public double calcularFerias(){
         return this.salarioBase + this.salarioBase/3;

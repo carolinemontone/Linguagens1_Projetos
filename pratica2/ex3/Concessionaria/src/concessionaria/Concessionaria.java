@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package concessionaria;
+import java.util.Scanner;
 
 /**
  *
@@ -16,7 +17,8 @@ public class Concessionaria {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      
+      Scanner input = new Scanner(System.in);
+        System.out.println("ola");
       
     }
     
