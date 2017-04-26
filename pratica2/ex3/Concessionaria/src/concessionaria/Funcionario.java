@@ -18,6 +18,14 @@ public class Funcionario {
     protected double vendas;
     protected double horaExtra;
 
+    public Funcionario(String nome, String cpf, int reg, double salario){
+        nome = this.nomeCompleto;
+        cpf = this.cpf;
+        reg = this.registro;
+        salario = this.salarioBase;
+
+    }
+    
     double calcularBonus(double bIndividual){
         return bIndividual;
     }
@@ -62,5 +70,20 @@ public class Funcionario {
     
     public double calcularFerias(){
         return this.salarioBase + this.salarioBase/3;
+    }
+    
+        public double getVendas() {
+        return vendas;
+    }
+
+    public void setVendas(double vendas) {
+        this.vendas = vendas;
+    }
+    
+    public void exibirResumo(){
+        System.out.println("Nome: "+ this.nomeCompleto);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Registro: " + this.registro);
+        System.out.println("Salário base: " + this.salarioBase);
     }
 }

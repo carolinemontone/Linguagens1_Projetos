@@ -11,15 +11,12 @@ import java.util.Scanner;
  * @author Professor
  */
 public class Concessionaria {
-    int totalFuncionario;
-    double totalVendas;
-    /**
+
+        /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Scanner input = new Scanner(System.in);
-        System.out.println("ola");
-      
+        
     }
     
 }
