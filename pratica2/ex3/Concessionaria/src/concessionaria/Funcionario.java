@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package concessionaria;
-
 /**
  *
  * @author Professor
  */
-public class Funcionario {
+abstract class Funcionario {
     protected String nomeCompleto;
     protected String cpf;
     protected int registro;
@@ -18,13 +17,6 @@ public class Funcionario {
     protected double vendas;
     protected double horaExtra;
 
-    public Funcionario(String nome, String cpf, int reg, double salario){
-        nome = this.nomeCompleto;
-        cpf = this.cpf;
-        reg = this.registro;
-        salario = this.salarioBase;
-
-    }
     
     double calcularBonus(double bIndividual){
         return bIndividual;
@@ -66,7 +58,6 @@ public class Funcionario {
     public double calcularDecTer(){
         return this.salarioBase + 1;
     }
-    
     
     public double calcularFerias(){
         return this.salarioBase + this.salarioBase/3;

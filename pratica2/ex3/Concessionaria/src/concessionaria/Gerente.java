@@ -12,8 +12,11 @@ package concessionaria;
 public class Gerente extends Funcionario{
     private static double taxaComissao = 0.05;
 
-    public Gerente(String nome, String cpf, int reg, double salario) {
-        super(nome, cpf, reg, salario);
+    public Gerente(String nome, String cpf, int reg, double salario){
+        nome = this.nomeCompleto;
+        cpf = this.cpf;
+        reg = this.registro;
+        salario = this.salarioBase;
     }
     
    @Override
@@ -22,12 +25,11 @@ public class Gerente extends Funcionario{
         System.out.println("Vendas: R$"+this.vendas);
     }
     
-    @Override
     public double CalcularBonus(double dIndividual){
         return (this.vendas*this.taxaComissao + dIndividual);
     }
     
     public double remuneracaoFinal (double bIndividual){
-       
+       return this.calcularBonus(bIndividual) + this.salarioBase;
     }
 }

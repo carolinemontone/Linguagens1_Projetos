@@ -12,6 +12,7 @@ import sun.security.util.Length;
  * @author Professor
  */
 public class ConcessionariaClasse {
+    private String nome;
     private int totalFuncionario;
     private double totalVendas;
     private double taxaBonus = 0.05;
@@ -21,6 +22,12 @@ public class ConcessionariaClasse {
     private Vendedor[] vendedor;
     private Gerente[] gerente;
 
+    public ConcessionariaClasse (String n, int nVend, int nGer){
+        n = this.nome;
+        vendedor = new Vendedor[nVend];
+        gerente = new Gerente[nGer];
+    }
+    
     public int getTotalFuncionario() {
         return totalFuncionario;
     }
@@ -75,11 +82,6 @@ public class ConcessionariaClasse {
 
     public void setGerente(Gerente[] gerente) {
         this.gerente = gerente;
-    }
-    
-    public ConcessionariaClasse (int nVend, int nGer){
-        vendedor = new Vendedor[nVend];
-        gerente = new Gerente[nGer];
     }
     
     public boolean novoVendedor(String nome, String cpf, int reg, double salario){

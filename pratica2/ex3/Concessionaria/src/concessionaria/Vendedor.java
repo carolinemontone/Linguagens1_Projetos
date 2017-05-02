@@ -14,7 +14,10 @@ public class Vendedor extends Funcionario{
     private static double taxaComissao = 0.03;
     
     public Vendedor(String nome, String cpf, int reg, double salario){
-        super(nome, cpf, reg, salario);
+        nome = this.nomeCompleto;
+        cpf = this.cpf;
+        reg = this.registro;
+        salario = this.salarioBase;
     }
     public double CalcularBonus(double dIndividual){
         return (this.vendas*this.taxaComissao + dIndividual);
