@@ -28,6 +28,14 @@ public class ConcessionariaClasse {
         gerente = new Gerente[nGer];
     }
     
+    public int totalVend(){
+        return this.vendedor.length;
+    }
+    
+    public int totalGer(){
+        return this.gerente.length;
+    }
+    
     public int getTotalFuncionario() {
         return totalFuncionario;
     }
@@ -68,16 +76,16 @@ public class ConcessionariaClasse {
         this.nGerente = nGerente;
     }
 
-    public Vendedor[] getVendedor() {
-        return vendedor;
+    public Vendedor getVendedor(int i ) {
+        return this.vendedor[i];
     }
-
+    
     public void setVendedor(Vendedor[] vendedor) {
         this.vendedor = vendedor;
     }
 
-    public Gerente[] getGerente() {
-        return gerente;
+    public Gerente getGerente(int i) {
+        return this.gerente[i];
     }
 
     public void setGerente(Gerente[] gerente) {
