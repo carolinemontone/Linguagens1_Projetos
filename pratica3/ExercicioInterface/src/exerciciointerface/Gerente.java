@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package exerciciointerface;
+import java.util.Scanner;
 
 /**
  *
@@ -15,5 +16,5 @@ public class Gerente extends Funcionario implements IAutenticavel{
             return false;}
         return false;
     }
-    
+
 }

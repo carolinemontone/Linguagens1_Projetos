@@ -13,10 +13,17 @@ import java.util.Scanner;
 public class Sistema {
    
     public boolean login(IAutenticavel a){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Digitar uma senha:");
-        int senha = input.nextInt();
-        return a.autentica(senha);
+        boolean r = false;
+        while (r = false){
+            Scanner input = new Scanner(System.in);
+            System.out.println("Digite sua senha:");
+            int senha = input.nextInt();
+            r = a.autentica(senha);
+            if (r = false){
+                System.out.println("Senha incorreta, tente novamente!");
+            }
+        }
+     return true;   
     }
     
 }
