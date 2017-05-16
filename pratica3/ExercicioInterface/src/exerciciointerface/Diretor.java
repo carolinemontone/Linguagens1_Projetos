@@ -12,12 +12,29 @@ import java.util.Scanner;
  * @author Professor
  */
 public class Diretor extends Funcionario implements IAutenticavel{
+    private int senha;
+
+    public Diretor(String nome, String cpf, int registro, double salario, int senha) {
+        super(nome, cpf, registro, salario);
+        this.senha = senha;
+    }
     
+    @Override
     public boolean autentica(int senha){
         if(this.senha != senha) {
             return false;}
-        return false;
+        else
+            return true;
     }
+    
+    @Override
+    public boolean alterarSenha(int senhaNova, int senhaAntiga){
+        boolean retorno =false;
+        if (senhaAntiga==this.senha){
+            this.senha = senhaNova;
+            retorno = true;
+        }
+        return retorno;}
     
     public void funcdoMes(){
         System.out.println("Digite o nome do funcionario do mês:");
@@ -40,4 +57,15 @@ public class Diretor extends Funcionario implements IAutenticavel{
         Scanner input = new Scanner(System.in);
         String nome = input.next();
     }
+    
+    public boolean darAumento(Funcionario f, int senha, double aumento){
+        boolean retorno = false;
+        
+        if (this.autentica(senha)){
+            f.setSalario(f.getSalario()+aumento);
+            retorno = true;
+        }
+        return retorno;
+    }
+
 }

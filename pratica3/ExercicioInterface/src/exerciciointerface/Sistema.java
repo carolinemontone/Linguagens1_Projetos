@@ -12,18 +12,8 @@ import java.util.Scanner;
  */
 public class Sistema {
    
-    public boolean login(IAutenticavel a){
-        boolean r = false;
-        while (r = false){
-            Scanner input = new Scanner(System.in);
-            System.out.println("Digite sua senha:");
-            int senha = input.nextInt();
-            r = a.autentica(senha);
-            if (r = false){
-                System.out.println("Senha incorreta, tente novamente!");
-            }
-        }
-     return true;   
+    public boolean login(IAutenticavel a, int senhaDeAcesso){
+        return  a.autentica(senhaDeAcesso);
+        }  
     }
     
-}

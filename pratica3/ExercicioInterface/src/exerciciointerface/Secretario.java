@@ -10,5 +10,14 @@ package exerciciointerface;
  * @author Professor
  */
 public class Secretario extends Funcionario {
+
+    public Secretario(String nome, String cpf, int registro, double salario) {
+        super(nome, cpf, registro, salario);
+    }
     
+    public boolean atenderTelefone(boolean ocupado){
+        return !ocupado;
+        
+    }
 }
+
