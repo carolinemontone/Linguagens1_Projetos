@@ -9,38 +9,49 @@ package atividadesimulacao;
  *
  * @author Professor
  */
-public class Produto implements IProduto{
-    protected String tipo;
+public abstract class Produto {
     protected double valor;
-    protected double area;
+    protected double c;
+    protected double a;
+    protected double l;
 
-    Produto(String tipo, double valor){
-        tipo = this.tipo;
-        valor = this.valor;
+    public Produto(double valor, double c, double a, double l) {
+        this.valor = valor;
+        this.c = c;
+        this.a = a;
+        this.l = l;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    public void setC(double c) {
+        this.c = c;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public double getL() {
+        return l;
+    }
+
+    public void setL(double l) {
+        this.l = l;
     }
     
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
     public double getValor() {
         return valor;
     }
 
     public void setValor(double valor) {
         this.valor = valor;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
     
     public double cmParaMetro(double cm) {

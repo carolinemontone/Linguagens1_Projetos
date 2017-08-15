@@ -11,15 +11,12 @@ package atividadesimulacao;
  */
 public class Bebidas extends Produto{
     private double capacidade;
-    private double a;
-    private double diametro;
 
-    Bebidas(String tipo, double valor, double cap, double a, double d){
-        super(tipo, valor);
-        cap = this.capacidade;
-        a = this.a;
-        d = this.diametro;
+    public Bebidas(double capacidade, double valor, double c, double a, double l) {
+        super(valor, c, a, l);
+        this.capacidade = capacidade;
     }
+ 
     
     public double getCapacidade() {
         return capacidade;
@@ -28,30 +25,5 @@ public class Bebidas extends Produto{
     public void setCapacidade(double capacidade) {
         this.capacidade = capacidade;
     }
-
-    public double getA() {
-        return a;
-    }
-
-    public void setA(double a) {
-        this.a = a;
-    }
-
-    public double getDiametro() {
-        return diametro;
-    }
-
-    public void setDiametro(double diametro) {
-        this.diametro = diametro;
-    }
-    
-    @Override
-    public double cmParaMetro(double cm) {
-        return cm/100;
-    }
         
-    @Override
-    public void calcularEspaco(){
-        this.area = Math.pow(cmParaMetro(this.diametro), 2)*Math.PI*cmParaMetro(this.a);
-    }
 }

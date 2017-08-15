@@ -11,15 +11,13 @@ package atividadesimulacao;
  */
 public class Eletronicos extends Produto{
     private boolean seguro;
-    private double c;
-    private double e;
-    private double l;
 
-    public Eletronicos(String tipo, double valor) {
-        super(tipo, valor);
+    public Eletronicos(boolean seguro, double valor, double c, double a, double l) {
+        super(valor, c, a, l);
+        this.seguro = seguro;
     }
-
-    public boolean isSeguro() {
+    
+    public boolean getSeguro() {
         return seguro;
     }
 
@@ -27,32 +25,4 @@ public class Eletronicos extends Produto{
         this.seguro = seguro;
     }
 
-    public double getC() {
-        return c;
-    }
-
-    public void setC(double c) {
-        this.c = c;
-    }
-
-    public double getE() {
-        return e;
-    }
-
-    public void setE(double e) {
-        this.e = e;
-    }
-
-    public double getL() {
-        return l;
-    }
-
-    public void setL(double l) {
-        this.l = l;
-    }
-
-    @Override
-    public void calcularEspaco(){
-        this.area = cmParaMetro(this.c)*cmParaMetro(this.e)*cmParaMetro(this.l);
-    }
 }
