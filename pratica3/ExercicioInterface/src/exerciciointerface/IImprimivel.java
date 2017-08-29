@@ -10,5 +10,7 @@ package exerciciointerface;
  * @author Professor
  */
 public interface IImprimivel {
+   
+    public void imprimirResumo();
     
 }

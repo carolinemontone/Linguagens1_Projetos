@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="305.0" prefWidth="464.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="cadastroalunos.FXMLDocumentController">
+    <children>
+      <TabPane prefHeight="359.0" prefWidth="464.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Cadastro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="155.0" layoutY="14.0" text="Nome" />
+                        <TextField fx:id="txtNome" layoutX="155.0" layoutY="31.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Label layoutX="155.0" layoutY="64.0" text="Idade" />
+                        <TextField fx:id="txtIdade" layoutX="155.0" layoutY="81.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Label layoutX="155.0" layoutY="114.0" text="Endereço" />
+                        <TextField fx:id="txtEndereco" layoutX="155.0" layoutY="131.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Label layoutX="155.0" layoutY="164.0" text="RG" />
+                        <TextField fx:id="txtRg" layoutX="155.0" layoutY="181.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Label layoutX="155.0" layoutY="213.0" text="CPF" />
+                        <TextField fx:id="txtCpf" layoutX="155.0" layoutY="230.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Button fx:id="btnCadastrar" layoutX="232.0" layoutY="279.0" mnemonicParsing="false" text="CADASTRAR" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pesquisa" />
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="334.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="45.0" layoutY="96.0" minHeight="16" minWidth="69" text="Itens:" />
+      <CheckBox fx:id="checkBox1" layoutX="53.0" layoutY="120.0" mnemonicParsing="false" text="Arroz" />
+      <CheckBox fx:id="checkBox2" layoutX="53.0" layoutY="137.0" mnemonicParsing="false" text="Feijão" />
+      <CheckBox fx:id="checkBox3" layoutX="53.0" layoutY="154.0" mnemonicParsing="false" text="Milho" />
+      <CheckBox fx:id="checkBox4" layoutX="53.0" layoutY="171.0" mnemonicParsing="false" text="Carne" />
+      <CheckBox fx:id="checkBox5" layoutX="53.0" layoutY="188.0" mnemonicParsing="false" text="Pudim" />
+      <CheckBox fx:id="checkBox6" layoutX="53.0" layoutY="205.0" mnemonicParsing="false" text="Pão" />
+      <CheckBox fx:id="checkBox7" layoutX="53.0" layoutY="222.0" mnemonicParsing="false" text="Macarrão" />
+      <CheckBox fx:id="checkBox8" layoutX="53.0" layoutY="239.0" mnemonicParsing="false" text="Farinha" />
+      <Label layoutX="158.0" layoutY="14.0" prefHeight="17.0" prefWidth="93.0" text="Lista de compras" />
+      <Button fx:id="btnAdicionar" layoutX="52.0" layoutY="288.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="25.0" prefWidth="113.0" text="Adicionar" />
+      <Button fx:id="btnRemoverTudo" layoutX="266.0" layoutY="288.0" mnemonicParsing="false" onAction="#removerTudo" prefHeight="25.0" prefWidth="102.0" text="Remover tudo" />
+      <TextArea fx:id="textArea" layoutX="217.0" layoutY="67.0" prefHeight="211.0" prefWidth="200.0" />
+    </children>
+</AnchorPane>

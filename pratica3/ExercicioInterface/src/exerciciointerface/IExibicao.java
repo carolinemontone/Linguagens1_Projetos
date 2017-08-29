@@ -11,4 +11,5 @@ package exerciciointerface;
  */
 public interface IExibicao extends IImprimivel {
     
+    public void exibirResumo();
 }

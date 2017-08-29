@@ -10,12 +10,19 @@ package exerciciointerface;
  * @author Professor
  */
 public abstract class Funcionario {
-    protected String nome;
-    protected String cpf;
-    protected int registro;
-    protected double salario;
-    protected int senha;
-
+    private String nome;
+    private String cpf;
+    private int registro;
+    private double salario;
+    
+    public Funcionario(String nome, String cpf, int registro, double salario){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.registro = registro;
+        this.salario = salario;
+                
+    }
+    
     public String getNome() {
         return nome;
     }
