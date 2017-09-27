@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="305.0" prefWidth="464.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="br.com.caroline.cadastroAlunos.mysql.FXMLDocumentController">
+    <children>
+      <TabPane prefHeight="359.0" prefWidth="464.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Cadastro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="imgView" fitHeight="123.0" fitWidth="122.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../info-corrigido-768x450.png" />
+                           </image></ImageView>
+                        <Label layoutX="155.0" layoutY="14.0" text="Nome" />
+                        <TextField fx:id="txtNome" layoutX="155.0" layoutY="31.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Label layoutX="155.0" layoutY="64.0" text="Idade" />
+                        <TextField fx:id="txtIdade" layoutX="155.0" layoutY="81.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Label layoutX="155.0" layoutY="114.0" text="Endereço" />
+                        <TextField fx:id="txtEndereco" layoutX="155.0" layoutY="131.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Label layoutX="155.0" layoutY="164.0" text="RG" />
+                        <TextField fx:id="txtRg" layoutX="155.0" layoutY="181.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Label layoutX="155.0" layoutY="213.0" text="CPF" />
+                        <TextField fx:id="txtCpf" layoutX="155.0" layoutY="230.0" prefHeight="25.0" prefWidth="280.0" />
+                        <Button fx:id="btnCadastrar" layoutX="232.0" layoutY="279.0" mnemonicParsing="false" onAction="#cadastrar" text="CADASTRAR" />
+                        <Button fx:id="btnImagem" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onAction="#adicionarImagem" text="Adicionar imagem" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pesquisa" />
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
