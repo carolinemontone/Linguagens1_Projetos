@@ -38,7 +38,7 @@ public class HelloInsert  {
             }
             catch(SQLException ex){
                     Logger.getLogger(HelloInsert.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+            }
                 
         }
         
