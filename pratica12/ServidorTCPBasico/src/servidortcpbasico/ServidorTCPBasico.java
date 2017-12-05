@@ -30,20 +30,20 @@ public class ServidorTCPBasico {
         while (true){
             Socket cliente = servidor.accept();
             System.out.println("Cliente conectado:"+ cliente.getInetAddress().getHostAddress());
-            
+
             PrintWriter out = new PrintWriter (cliente.getOutputStream(), true);
             out.println("Ola! Bem-vindo: seu IP é "+ cliente.getInetAddress().getAddress());
-            
+
             Scanner in = new Scanner (cliente.getInputStream());
             Scanner scan = new Scanner(System.in);
-            
+
             String a = scan.nextLine();
             System.out.println(a);
-            
+
             String s = in.nextLine();
-            
+
             System.out.println(s);
-    
+
         }
     }
         catch (Exception e){
