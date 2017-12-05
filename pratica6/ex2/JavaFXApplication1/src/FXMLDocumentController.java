@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
@@ -38,19 +39,21 @@ public class FXMLDocumentController implements Initializable {
     private Button btnEditar;
     
     ListadeContato lista = new ListadeContato();
-    @FXML
-    private TableView<UserAccount, String> listView;
-    private TableColumn<UserAccount, String> nomeCol //
-              = new TableColumn<UserAccount, String>("Nome");
     
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    @FXML
+    private TableView listView = new TableView();
+    @FXML
+    private TableColumn nomeColuna = new TableColumn("Nome");
+    @FXML
+    private TableColumn celularColuna = new TableColumn("Celular");
+    
+   
+   
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       
+
     }    
 
     @FXML
@@ -75,5 +78,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void editarContato(ActionEvent event) {
     }
+
+
+  
     
 }
