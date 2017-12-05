@@ -42,7 +42,24 @@
 /NewFolder/Clientes/build/
 /Clientes/nbproject/private/
 /Clientes/build/
+<<<<<<< HEAD
 /pratica11/eCommerce/nbproject/private/
 /pratica11/eCommerceProj/nbproject/private/
 /pratica11/eCommerceProj/build/
 /pratica11/eCommerceProj/dist/
+=======
+/Atividade3/Atividade3/nbproject/private/
+/Atividade3/Atividade3/build/
+/Atividade3/Atividade3/dist/
+/pratica12/Sockets/nbproject/private/
+/pratica12/ServidorTCPBasico/nbproject/private/
+/pratica12/ServidorTCPBasico/build/
+/patricaThreads/Threads/nbproject/private/
+/patricaThreads/Threads/build/
+/pratica13/ChatThread/nbproject/private/
+/pratica14/ChatThread/nbproject/private/
+/pratica14/HelloThread/build/
+/pratica14/HelloThread/nbproject/private/
+/pratica13/ChatThread/build/
+/pratica13/ChatThreadCliente/nbproject/private/
+>>>>>>> 78ac27829e309afc50eae7de047a79b0e79cb905
