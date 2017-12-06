@@ -25,13 +25,8 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
-    @FXML
     private TextField txtNome;
-    @FXML
     private TextField txtCel;
-    @FXML
-    private Button btnAdd;
-    @FXML
     private TextField txtSearch;
     @FXML
     private Button btnProcurar;
@@ -43,11 +38,21 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TableView listView = new TableView();
     @FXML
+<<<<<<< HEAD
     private TableColumn nomeColuna = new TableColumn("Nome");
     @FXML
     private TableColumn celularColuna = new TableColumn("Celular");
     
    
+=======
+    private TableView<Contato> listView;
+    @FXML
+    private Button adicionarContato;
+    @FXML
+    private TableColumn<Contato, String> nomeColuna;
+    @FXML
+    private TableColumn<Contato, String> celularColuna;
+>>>>>>> 9243a52148e250f5042b613cb6b5a7fc6ccccaed
    
     
     @Override
@@ -56,20 +61,18 @@ public class FXMLDocumentController implements Initializable {
 
     }    
 
-    @FXML
     private void adicionarContato(ActionEvent event) {
         this.lista.adicionarContato(txtNome.getText(), txtCel.getText());
         txtNome.setText("");
         txtCel.setText("");
     }
 
-    @FXML
     private void procurar(ActionEvent event) {
         ArrayList<String> nomeBusca = new ArrayList<String>(); 
         ArrayList<String> celularBusca = new ArrayList<String>();
         if (this.lista.buscarContato(txtSearch.getText(), nomeBusca, celularBusca)){
             for (int i=0; i< nomeBusca.size(); i++){
-                this.listView.getColumns().addAll(nomeBusca, celularBusca);
+                
             }
             
         }
