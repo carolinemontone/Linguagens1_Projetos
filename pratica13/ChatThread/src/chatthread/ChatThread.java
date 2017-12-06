@@ -46,7 +46,7 @@ public class ChatThread implements Runnable{
                 saidaRede.println(msg);
                 
             }
-            System.out.println("Servidor fechou");
+            System.out.println("Servidor fechou, pressione ENTER");
             cliente.close();
             fechou = true;
 

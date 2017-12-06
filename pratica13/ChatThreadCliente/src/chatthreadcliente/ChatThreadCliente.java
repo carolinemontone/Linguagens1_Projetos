@@ -17,14 +17,14 @@ import java.util.Scanner;
  */
 public class ChatThreadCliente implements Runnable {
 
-    static Socket cliente;
+    static Socket server;
     static boolean fechou = false;
 
     public static void main(String[] args) {
        
         try {
             //colocar:                IP         Porta
-            cliente = new Socket("localhost", 9000);
+            server = new Socket("localhost", 9000);
             System.out.println("To no servidor");
             
             Thread thr_entrada = new Thread(new ChatThreadCliente());
@@ -32,7 +32,7 @@ public class ChatThreadCliente implements Runnable {
                                                 
             try (
                     Scanner teclado = new Scanner(System.in);
-                    PrintStream saidaRede = new PrintStream(cliente.getOutputStream());
+                    PrintStream saidaRede = new PrintStream(server.getOutputStream());
                 ) 
             {
                 
@@ -42,7 +42,9 @@ public class ChatThreadCliente implements Runnable {
                     saidaRede.println(msg);                
                 }
             }            
-            cliente.close();
+            System.out.println("Aplicação finalizada. Pressione ENTER para fechar");
+            fechou = true;
+            server.close();
 
         } catch (IOException ex) {
             System.out.println("deu ruim");
@@ -52,15 +54,16 @@ public class ChatThreadCliente implements Runnable {
     @Override
     public void run() {
         try (
-            Scanner entradaRede = new Scanner(cliente.getInputStream());    
+            Scanner entradaRede = new Scanner(server.getInputStream());    
             )
         {
             String msg = "";                           
             while (!fechou && !msg.equalsIgnoreCase("tchau")) {
                 msg = entradaRede.nextLine();
-                System.out.println(msg);
+                System.out.println("Server: "+msg);
             }
-                    
+            System.out.println("Server fechou a conexão, pressione enter");
+            fechou = true;
         }   catch (IOException ex) {
              System.out.println("deu ruim");
         }
